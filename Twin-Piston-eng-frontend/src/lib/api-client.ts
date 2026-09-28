@@ -17,7 +17,7 @@ import type {
   WhatIfResponse,
 } from "@/types/backend-api";
 
-const BASE_URL = "http://localhost:8000/api/v1";
+const BASE_URL = (import.meta.env.VITE_API_BASE_URL as string) || "http://localhost:8000/api/v1";
 
 async function fetchJSON<T>(endpoint: string, options?: RequestInit): Promise<T> {
   const url = `${BASE_URL}${endpoint}`;
