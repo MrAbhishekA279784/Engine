@@ -1,0 +1,174 @@
+{
+ "provenance": "SIMULATED",
+ "dataset": {
+  "version": "life1",
+  "dataset_sha256": "cc56a79d1162b6dcb7590572f57aed246ad0c3ef34cf16bb2f30fad494fbc370",
+  "seed": 20260929,
+  "engines": 300,
+  "windows": 31573,
+  "code_git_sha": "c53aeddf976b22f62a727578b86c36cab12731cd-dirty",
+  "monitor_cadence_h": 5.0,
+  "fleet_classes": [
+   "NOMINAL",
+   "MISFIRE",
+   "DETONATION_KNOCK",
+   "EXHAUST_VALVE_LEAK",
+   "INTAKE_BOOST_LEAK",
+   "OIL_DEGRADATION",
+   "COOLING_FAULT",
+   "BEARING_WEAR",
+   "INJECTOR_FAULT",
+   "FUEL_SYSTEM_FAULT",
+   "IMBALANCE",
+   "CHARGING_FAULT",
+   "BATTERY_DEGRADATION"
+  ]
+ },
+ "method": "ported from aerotwin_ml (fleet/faults/rul), driven by this backend's simulator and pipeline",
+ "severity_mae": {
+  "val": 0.06301933183305711,
+  "test": 0.06638198652568619
+ },
+ "interval_bands_q05_q95_val": {
+  "0-50h": [
+   -23.88940038337181,
+   21.550436292964953
+  ],
+  "50-150h": [
+   -56.96414449272362,
+   76.67558660157141
+  ],
+  "150-400h": [
+   -119.31369505012111,
+   73.30518989979822
+  ]
+ },
+ "validation": {
+  "engines": 60,
+  "ml": {
+   "0-50h": {
+    "n": 392,
+    "mae_h": 15.672688349230302,
+    "coverage_90": 0.9030612244897959
+   },
+   "50-150h": {
+    "n": 551,
+    "mae_h": 27.502218378755515,
+    "coverage_90": 0.9382940108892922
+   },
+   "150-400h": {
+    "n": 507,
+    "mae_h": 37.70363181395722,
+    "coverage_90": 0.9309664694280079
+   }
+  },
+  "baseline_same_rows": {
+   "0-50h": {
+    "n": 392,
+    "mae_h": 359.6248694268882
+   },
+   "50-150h": {
+    "n": 551,
+    "mae_h": 300.7113434035869
+   },
+   "150-400h": {
+    "n": 507,
+    "mae_h": 163.15435417625022
+   }
+  },
+  "baseline_all_faulty_rows": {
+   "0-50h": {
+    "n": 480,
+    "mae_h": 362.2095964051454
+   },
+   "50-150h": {
+    "n": 960,
+    "mae_h": 297.9163398199481
+   },
+   "150-400h": {
+    "n": 2874,
+    "mae_h": 102.9176527678722
+   }
+  },
+  "ml_interval_coverage_90": 0.9262068965517242,
+  "status_share_faulty": {
+   "NO_DEGRADATION": 0.5519,
+   "ESTIMATED": 0.3288,
+   "INDETERMINATE": 0.1193
+  },
+  "healthy_engines_estimated_share": 0.0,
+  "baseline_median_h_healthy": 2000.0
+ },
+ "test": {
+  "engines": 60,
+  "ml": {
+   "0-50h": {
+    "n": 423,
+    "mae_h": 18.96412181765523,
+    "coverage_90": 0.8723404255319149
+   },
+   "50-150h": {
+    "n": 542,
+    "mae_h": 25.59014318386071,
+    "coverage_90": 0.8782287822878229
+   },
+   "150-400h": {
+    "n": 494,
+    "mae_h": 84.14083778753385,
+    "coverage_90": 0.520242914979757
+   }
+  },
+  "baseline_same_rows": {
+   "0-50h": {
+    "n": 423,
+    "mae_h": 363.8135804162321
+   },
+   "50-150h": {
+    "n": 542,
+    "mae_h": 304.55431432613153
+   },
+   "150-400h": {
+    "n": 494,
+    "mae_h": 136.1169517195907
+   }
+  },
+  "baseline_all_faulty_rows": {
+   "0-50h": {
+    "n": 480,
+    "mae_h": 364.90100027614915
+   },
+   "50-150h": {
+    "n": 960,
+    "mae_h": 298.4202199107682
+   },
+   "150-400h": {
+    "n": 3313,
+    "mae_h": 89.98329523870024
+   }
+  },
+  "ml_interval_coverage_90": 0.7553118574366005,
+  "status_share_faulty": {
+   "NO_DEGRADATION": 0.5869,
+   "ESTIMATED": 0.3009,
+   "INDETERMINATE": 0.1122
+  },
+  "healthy_engines_estimated_share": 0.0539568345323741,
+  "baseline_median_h_healthy": 2000.0
+ },
+ "decision": {
+  "adopted": true,
+  "decided_on": "validation engines",
+  "bands_with_data_val": [
+   "0-50h",
+   "50-150h",
+   "150-400h"
+  ],
+  "beats_baseline_val": true,
+  "bands_with_data_test": [
+   "0-50h",
+   "50-150h",
+   "150-400h"
+  ],
+  "beats_baseline_test": true
+ }
+}

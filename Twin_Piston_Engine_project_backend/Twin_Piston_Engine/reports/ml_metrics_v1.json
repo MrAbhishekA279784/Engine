@@ -1,0 +1,1449 @@
+{
+ "provenance": "SIMULATED",
+ "evaluated_at": "2026-09-27T21:29:57.010296+00:00",
+ "dataset": {
+  "version": "v1",
+  "dataset_sha256": "7e8c45692a99358db18f1a9ac8a4f6a5718e1ddfcd48577411e1a8494749f56e",
+  "seed": 20260928,
+  "code_git_sha": "732b21886f8e2daa1d9d95f818de07c3c7bc0140-dirty",
+  "feature_schema_version": "2.0.0",
+  "rows": 230400,
+  "trajectories": 960,
+  "splits": {
+   "holdout_op": 120,
+   "test": 169,
+   "train": 503,
+   "val": 168
+  }
+ },
+ "model_version": "v1",
+ "targets": {
+  "anomaly_pr_auc": 0.93,
+  "anomaly_fpr_max": 0.05,
+  "classifier_macro_f1": 0.81
+ },
+ "test": {
+  "trajectories": 169,
+  "anomaly": {
+   "pr_auc": 0.8186631103743724,
+   "fpr": 0.071518314487291,
+   "recall": 0.529245947850599,
+   "n_records": 40560,
+   "n_positive": 19866
+  },
+  "classifier_ml": {
+   "macro_f1": 0.7900078667880044,
+   "per_class_f1": {
+    "NOMINAL": 0.8425379890865491,
+    "MISFIRE": 0.9995949777237748,
+    "DETONATION_KNOCK": 0.9625141991669822,
+    "EXHAUST_VALVE_LEAK": 0.9585166561910748,
+    "INTAKE_BOOST_LEAK": 0.36670416197975253,
+    "OIL_DEGRADATION": 0.9822683171629307,
+    "COOLING_FAULT": 0.6432645897323388,
+    "BEARING_WEAR": 0.9997177533163986,
+    "SENSOR_FAULT": 1.0,
+    "INJECTOR_FAULT": 0.9517530716212167,
+    "FUEL_SYSTEM_FAULT": 0.25573314801945796,
+    "IMBALANCE": 0.9857723577235772,
+    "CHARGING_FAULT": 0.9364341085271318,
+    "BATTERY_DEGRADATION": 0.1752988047808765
+   },
+   "confusion_matrix": [
+    [
+     17216,
+     0,
+     3,
+     7,
+     1313,
+     4,
+     121,
+     0,
+     0,
+     14,
+     756,
+     11,
+     2,
+     1247
+    ],
+    [
+     1,
+     1234,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     53,
+     0,
+     1271,
+     1,
+     17,
+     0,
+     3,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     7
+    ],
+    [
+     32,
+     0,
+     1,
+     1525,
+     2,
+     0,
+     0,
+     0,
+     0,
+     25,
+     4,
+     0,
+     0,
+     2
+    ],
+    [
+     672,
+     0,
+     3,
+     0,
+     815,
+     0,
+     11,
+     0,
+     0,
+     0,
+     85,
+     1,
+     0,
+     29
+    ],
+    [
+     28,
+     0,
+     0,
+     0,
+     0,
+     1468,
+     1,
+     0,
+     0,
+     0,
+     12,
+     0,
+     0,
+     8
+    ],
+    [
+     382,
+     0,
+     0,
+     0,
+     165,
+     0,
+     733,
+     0,
+     0,
+     0,
+     67,
+     1,
+     0,
+     33
+    ],
+    [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1771,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1525,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     49,
+     0,
+     8,
+     57,
+     6,
+     0,
+     0,
+     0,
+     0,
+     1588,
+     1,
+     1,
+     0,
+     0
+    ],
+    [
+     877,
+     0,
+     1,
+     1,
+     88,
+     0,
+     8,
+     0,
+     0,
+     0,
+     368,
+     0,
+     0,
+     195
+    ],
+    [
+     8,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     5,
+     1455,
+     0,
+     14
+    ],
+    [
+     159,
+     0,
+     0,
+     0,
+     35,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1510,
+     9
+    ],
+    [
+     695,
+     0,
+     1,
+     0,
+     388,
+     0,
+     21,
+     0,
+     0,
+     0,
+     41,
+     1,
+     0,
+     286
+    ]
+   ],
+   "accuracy": 0.8078155818540433
+  },
+  "classifier_rules": {
+   "macro_f1": 0.5163415704068333,
+   "per_class_f1": {
+    "NOMINAL": 0.8164594434576673,
+    "MISFIRE": 0.6361126449475428,
+    "DETONATION_KNOCK": 0.8,
+    "EXHAUST_VALVE_LEAK": 0.01488833746898263,
+    "INTAKE_BOOST_LEAK": 0.0,
+    "OIL_DEGRADATION": 0.8069209594966575,
+    "COOLING_FAULT": 0.0,
+    "BEARING_WEAR": 0.9963183234211271,
+    "SENSOR_FAULT": 1.0,
+    "INJECTOR_FAULT": 0.4977525431748285,
+    "FUEL_SYSTEM_FAULT": 0.14406302757456388,
+    "IMBALANCE": 0.6533393911858246,
+    "CHARGING_FAULT": 0.86292731496847,
+    "BATTERY_DEGRADATION": 0.0
+   },
+   "confusion_matrix": [
+    [
+     20685,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     9,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     583,
+     576,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     76,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     451,
+     0,
+     902,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     215,
+     0,
+     0,
+     12,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1364,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     1614,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     491,
+     0,
+     0,
+     0,
+     0,
+     1026,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     1379,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1759,
+     0,
+     12,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1525,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     538,
+     0,
+     0,
+     9,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1052,
+     111,
+     0,
+     0,
+     0
+    ],
+    [
+     1410,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     128,
+     0,
+     0,
+     0
+    ],
+    [
+     763,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     719,
+     0,
+     0
+    ],
+    [
+     413,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1300,
+     0
+    ],
+    [
+     1433,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "accuracy": 0.7318540433925049
+  },
+  "warning_lead_time": {
+   "median_lead_s": 63.323522856675964,
+   "warned_before_failure": 71,
+   "missed": 29,
+   "sustain_records": 5,
+   "definition": "anomaly alarm sustained 5 records after onset, before the fault reaches full severity"
+  },
+  "rul_baseline_error": {
+   "<=50h": {
+    "n": 32844,
+    "mae_h": 860.1656124050213
+   },
+   "50-150h": {
+    "n": 0,
+    "mae_h": null
+   },
+   ">150h": {
+    "n": 0,
+    "mae_h": null
+   }
+  }
+ },
+ "holdout_op": {
+  "trajectories": 120,
+  "anomaly": {
+   "pr_auc": 0.8707740099564046,
+   "fpr": 0.017213275086392383,
+   "recall": 0.5047909084156578,
+   "n_records": 28800,
+   "n_positive": 13463
+  },
+  "classifier_ml": {
+   "macro_f1": 0.7889830968324599,
+   "per_class_f1": {
+    "NOMINAL": 0.8394943628288349,
+    "MISFIRE": 1.0,
+    "DETONATION_KNOCK": 0.9678456591639871,
+    "EXHAUST_VALVE_LEAK": 0.9657401422107305,
+    "INTAKE_BOOST_LEAK": 0.31010452961672474,
+    "OIL_DEGRADATION": 0.9840637450199203,
+    "COOLING_FAULT": 0.7290969899665551,
+    "BEARING_WEAR": 1.0,
+    "SENSOR_FAULT": 1.0,
+    "INJECTOR_FAULT": 0.9480662983425414,
+    "FUEL_SYSTEM_FAULT": 0.27944325481798715,
+    "IMBALANCE": 0.98959236773634,
+    "CHARGING_FAULT": 0.9201365187713311,
+    "BATTERY_DEGRADATION": 0.11217948717948718
+   },
+   "confusion_matrix": [
+    [
+     12286,
+     0,
+     4,
+     0,
+     900,
+     1,
+     148,
+     0,
+     0,
+     9,
+     850,
+     6,
+     0,
+     1133
+    ],
+    [
+     0,
+     1951,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     47,
+     0,
+     1204,
+     0,
+     4,
+     0,
+     15,
+     0,
+     0,
+     0,
+     6,
+     0,
+     0,
+     3
+    ],
+    [
+     24,
+     0,
+     0,
+     747,
+     0,
+     0,
+     0,
+     0,
+     0,
+     5,
+     2,
+     0,
+     0,
+     10
+    ],
+    [
+     203,
+     0,
+     0,
+     0,
+     356,
+     0,
+     11,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     98
+    ],
+    [
+     26,
+     0,
+     0,
+     0,
+     0,
+     988,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     4
+    ],
+    [
+     372,
+     0,
+     1,
+     0,
+     132,
+     0,
+     981,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     44
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     976,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1203,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     20,
+     0,
+     0,
+     12,
+     0,
+     0,
+     0,
+     0,
+     0,
+     429,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     178,
+     0,
+     0,
+     0,
+     151,
+     1,
+     4,
+     0,
+     0,
+     0,
+     261,
+     0,
+     0,
+     115
+    ],
+    [
+     16,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1141,
+     0,
+     0
+    ],
+    [
+     95,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     674,
+     20
+    ],
+    [
+     666,
+     0,
+     0,
+     0,
+     82,
+     0,
+     1,
+     0,
+     0,
+     1,
+     37,
+     0,
+     2,
+     140
+    ]
+   ],
+   "accuracy": 0.8103125
+  },
+  "classifier_rules": {
+   "macro_f1": 0.5441234520275684,
+   "per_class_f1": {
+    "NOMINAL": 0.840821249417505,
+    "MISFIRE": 0.81253804017042,
+    "DETONATION_KNOCK": 0.7564414195430238,
+    "EXHAUST_VALVE_LEAK": 0.005063291139240506,
+    "INTAKE_BOOST_LEAK": 0.0,
+    "OIL_DEGRADATION": 0.8398860398860399,
+    "COOLING_FAULT": 0.09695463020509633,
+    "BEARING_WEAR": 1.0,
+    "SENSOR_FAULT": 1.0,
+    "INJECTOR_FAULT": 0.33163913595933925,
+    "FUEL_SYSTEM_FAULT": 0.35634743875278396,
+    "IMBALANCE": 0.725673446948873,
+    "CHARGING_FAULT": 0.8523636363636363,
+    "BATTERY_DEGRADATION": 0.0
+   },
+   "confusion_matrix": [
+    [
+     15337,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     387,
+     1335,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     229,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     501,
+     0,
+     778,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     163,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     623,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     669,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     281,
+     0,
+     0,
+     0,
+     0,
+     737,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     1453,
+     0,
+     0,
+     0,
+     0,
+     0,
+     78,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     976,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1203,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     172,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     261,
+     28,
+     0,
+     0,
+     0
+    ],
+    [
+     550,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     160,
+     0,
+     0,
+     0
+    ],
+    [
+     499,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     660,
+     0,
+     0
+    ],
+    [
+     203,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     586,
+     0
+    ],
+    [
+     929,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "accuracy": 0.7678125
+  },
+  "warning_lead_time": {
+   "median_lead_s": 67.07471966204605,
+   "warned_before_failure": 37,
+   "missed": 25,
+   "sustain_records": 5,
+   "definition": "anomaly alarm sustained 5 records after onset, before the fault reaches full severity"
+  },
+  "rul_baseline_error": {
+   "<=50h": {
+    "n": 22372,
+    "mae_h": 865.3564191763958
+   },
+   "50-150h": {
+    "n": 0,
+    "mae_h": null
+   },
+   ">150h": {
+    "n": 0,
+    "mae_h": null
+   }
+  }
+ },
+ "channel_dropout": {
+  "confidence_threshold": 0.7,
+  "groups": {
+   "none": {
+    "accuracy": 0.8078155818540433,
+    "mean_confidence": 0.8112668575223443,
+    "confident_wrong_rate": 0.057692307692307696,
+    "anomaly_alarm_rate_nominal": 0.071518314487291
+   },
+   "cht": {
+    "features_removed": 2,
+    "accuracy": 0.8310157790927022,
+    "mean_confidence": 0.8309136032467207,
+    "confident_wrong_rate": 0.08150887573964496,
+    "anomaly_alarm_rate_nominal": 0.06755581327921137
+   },
+   "coolant": {
+    "features_removed": 5,
+    "accuracy": 0.8166420118343195,
+    "mean_confidence": 0.7348837772752467,
+    "confident_wrong_rate": 0.03321005917159763,
+    "anomaly_alarm_rate_nominal": 0.0517541316323572
+   },
+   "crank": {
+    "features_removed": 3,
+    "accuracy": 0.860034516765286,
+    "mean_confidence": 0.8884575104787378,
+    "confident_wrong_rate": 0.12201676528599606,
+    "anomaly_alarm_rate_nominal": 0.2449502271189717
+   },
+   "egt": {
+    "features_removed": 13,
+    "accuracy": 0.039151873767258386,
+    "mean_confidence": 0.7501781122088266,
+    "confident_wrong_rate": 0.780448717948718,
+    "anomaly_alarm_rate_nominal": 0.048081569537063884
+   },
+   "electrical": {
+    "features_removed": 5,
+    "accuracy": 0.22768737672583828,
+    "mean_confidence": 0.796576950470497,
+    "confident_wrong_rate": 0.6915680473372781,
+    "anomaly_alarm_rate_nominal": 0.06257852517637963
+   },
+   "fuel": {
+    "features_removed": 18,
+    "accuracy": 0.7768244575936883,
+    "mean_confidence": 0.5884945080878287,
+    "confident_wrong_rate": 0.005226824457593688,
+    "anomaly_alarm_rate_nominal": 0.5823427080313134
+   },
+   "ignition": {
+    "features_removed": 4,
+    "accuracy": 0.8026134122287969,
+    "mean_confidence": 0.7858296364838574,
+    "confident_wrong_rate": 0.053106508875739644,
+    "anomaly_alarm_rate_nominal": 0.05914757900840823
+   },
+   "oil": {
+    "features_removed": 6,
+    "accuracy": 0.11383136094674556,
+    "mean_confidence": 0.7391839903832773,
+    "confident_wrong_rate": 0.7739891518737673,
+    "anomaly_alarm_rate_nominal": 0.05827776167004929
+   },
+   "vibration": {
+    "features_removed": 10,
+    "accuracy": 0.6102317554240632,
+    "mean_confidence": 0.4271814672337368,
+    "confident_wrong_rate": 0.010355029585798817,
+    "anomaly_alarm_rate_nominal": 0.06079056731419735
+   }
+  }
+ },
+ "rul": {
+  "baseline": "RULEstimator (existing trend estimator) kept",
+  "regressor": {
+   "decision": "not adopted: it must beat the baseline in every horizon band on validation; populated bands ['<=50h'] of ['<=50h', '50-150h', '>150h']",
+   "val_ml": {
+    "<=50h": {
+     "n": 32880,
+     "mae_h": 0.010834652372931354
+    },
+    "50-150h": {
+     "n": 0,
+     "mae_h": null
+    },
+    ">150h": {
+     "n": 0,
+     "mae_h": null
+    }
+   },
+   "val_baseline": {
+    "<=50h": {
+     "n": 32606,
+     "mae_h": 866.3289299137905
+    },
+    "50-150h": {
+     "n": 0,
+     "mae_h": null
+    },
+    ">150h": {
+     "n": 0,
+     "mae_h": null
+    }
+   }
+  }
+ },
+ "cruise_point": {
+  "NOMINAL": {
+   "rule": "NOMINAL",
+   "ml": "NOMINAL",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.47926152424305024,
+   "anomaly": false,
+   "anomaly_score": 0.404934756609939
+  },
+  "MISFIRE": {
+   "rule": "MISFIRE",
+   "ml": "MISFIRE",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.995931962307111,
+   "anomaly": true,
+   "anomaly_score": 0.5585753868711462
+  },
+  "DETONATION_KNOCK": {
+   "rule": "DETONATION_KNOCK",
+   "ml": "DETONATION_KNOCK",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.9916444706959762,
+   "anomaly": true,
+   "anomaly_score": 0.5428580290334268
+  },
+  "EXHAUST_VALVE_LEAK": {
+   "rule": "INJECTOR_FAULT",
+   "ml": "EXHAUST_VALVE_LEAK",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.9994618786063292,
+   "anomaly": false,
+   "anomaly_score": 0.4679145349499797
+  },
+  "INTAKE_BOOST_LEAK": {
+   "rule": "NOMINAL",
+   "ml": "INTAKE_BOOST_LEAK",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.863551304512709,
+   "anomaly": true,
+   "anomaly_score": 0.48523907612450184
+  },
+  "OIL_DEGRADATION": {
+   "rule": "OIL_DEGRADATION",
+   "ml": "OIL_DEGRADATION",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.999762991587851,
+   "anomaly": false,
+   "anomaly_score": 0.44269425047060806
+  },
+  "COOLING_FAULT": {
+   "rule": "NOMINAL",
+   "ml": "COOLING_FAULT",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.9988238692883852,
+   "anomaly": false,
+   "anomaly_score": 0.4624481763023732
+  },
+  "BEARING_WEAR": {
+   "rule": "BEARING_WEAR",
+   "ml": "BEARING_WEAR",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.9997808582732124,
+   "anomaly": true,
+   "anomaly_score": 0.4781050550240396
+  },
+  "SENSOR_FAULT": {
+   "rule": "SENSOR_FAULT",
+   "ml": "SENSOR_FAULT",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.9563650186906049,
+   "anomaly": false,
+   "anomaly_score": 0.44222105515787785
+  },
+  "INJECTOR_FAULT": {
+   "rule": "NOMINAL",
+   "ml": "INJECTOR_FAULT",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.9938164860444011,
+   "anomaly": true,
+   "anomaly_score": 0.5066113402744163
+  },
+  "FUEL_SYSTEM_FAULT": {
+   "rule": "FUEL_SYSTEM_FAULT",
+   "ml": "FUEL_SYSTEM_FAULT",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.9738904571830586,
+   "anomaly": true,
+   "anomaly_score": 0.5023896382121025
+  },
+  "IMBALANCE": {
+   "rule": "IMBALANCE",
+   "ml": "IMBALANCE",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.9997706134002033,
+   "anomaly": true,
+   "anomaly_score": 0.4970113961797313
+  },
+  "CHARGING_FAULT": {
+   "rule": "CHARGING_FAULT",
+   "ml": "CHARGING_FAULT",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.999549419256616,
+   "anomaly": false,
+   "anomaly_score": 0.4123557224620846
+  },
+  "BATTERY_DEGRADATION": {
+   "rule": "NOMINAL",
+   "ml": "NOMINAL",
+   "ml_status": "SUCCESS",
+   "ml_is_ml": true,
+   "ml_confidence": 0.47931989397651475,
+   "anomaly": false,
+   "anomaly_score": 0.40633554671017197
+  }
+ },
+ "leakage_audit": {
+  "INTAKE_BOOST_LEAK": {
+   "rule_at_cruise": "NOMINAL",
+   "ml_at_cruise": "INTAKE_BOOST_LEAK",
+   "ml_beats_rule_at_cruise": true,
+   "test_split": {
+    "recall": 0.5043316831683168,
+    "n_records": 1616,
+    "top_permutation_drops": [
+     [
+      "trend_cht",
+      0.09220297029702967
+     ],
+     [
+      "trend_coolant",
+      0.08539603960396036
+     ],
+     [
+      "twin_bmep_pa",
+      0.07240099009900985
+     ],
+     [
+      "trend_egt_cyl4",
+      0.06621287128712866
+     ],
+     [
+      "trend_oil_temp",
+      0.03279702970297027
+     ],
+     [
+      "comb_csi",
+      0.03155940594059403
+     ]
+    ]
+   }
+  },
+  "BATTERY_DEGRADATION": {
+   "rule_at_cruise": "NOMINAL",
+   "ml_at_cruise": "NOMINAL",
+   "ml_beats_rule_at_cruise": false,
+   "test_split": {
+    "recall": 0.19958129797627355,
+    "n_records": 1433,
+    "top_permutation_drops": [
+     [
+      "trend_cht",
+      0.11793440334961619
+     ],
+     [
+      "cool_residual",
+      0.04117236566643406
+     ],
+     [
+      "trend_coolant",
+      0.0404745289602233
+     ],
+     [
+      "comb_csi",
+      0.03977669225401256
+     ],
+     [
+      "trend_oil_temp",
+      0.03977669225401256
+     ],
+     [
+      "res_vibration_rms",
+      0.027913468248429857
+     ]
+    ]
+   }
+  },
+  "INJECTOR_FAULT": {
+   "rule_at_cruise": "NOMINAL",
+   "ml_at_cruise": "INJECTOR_FAULT",
+   "ml_beats_rule_at_cruise": true,
+   "test_split": {
+    "recall": 0.928654970760234,
+    "n_records": 1710,
+    "top_permutation_drops": [
+     [
+      "egt_spread",
+      0.6181286549707603
+     ],
+     [
+      "res_fuel_delivery_ratio",
+      0.35847953216374273
+     ],
+     [
+      "inj_egt_diff_cyl2",
+      0.006432748538011679
+     ],
+     [
+      "inj_egt_diff_cyl1",
+      0.0035087719298245723
+     ],
+     [
+      "lub_temp_margin",
+      0.0029239766081872176
+     ],
+     [
+      "inj_delivery_ratio",
+      0.0029239766081872176
+     ]
+    ]
+   }
+  },
+  "COOLING_FAULT": {
+   "rule_at_cruise": "NOMINAL",
+   "ml_at_cruise": "COOLING_FAULT",
+   "ml_beats_rule_at_cruise": true,
+   "test_split": {
+    "recall": 0.5307748008689356,
+    "n_records": 1381,
+    "top_permutation_drops": [
+     [
+      "cool_cht_delta",
+      0.1991310644460536
+     ],
+     [
+      "cool_residual",
+      0.09920347574221583
+     ],
+     [
+      "trend_cht",
+      0.03258508327299059
+     ],
+     [
+      "comb_csi",
+      0.031136857349746583
+     ],
+     [
+      "res_coolant",
+      0.020999275887038427
+     ],
+     [
+      "trend_egt_cyl1",
+      0.015930485155684293
+     ]
+    ]
+   }
+  }
+ }
+}

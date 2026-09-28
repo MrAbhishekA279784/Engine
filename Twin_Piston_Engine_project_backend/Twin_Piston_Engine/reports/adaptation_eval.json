@@ -1,0 +1,406 @@
+{
+ "provenance": "SIMULATED",
+ "dataset": "life2",
+ "versions": [
+  "v2",
+  "v3"
+ ],
+ "fleet_reference_version": "v3",
+ "variation": {
+  "ageing_egt_k_per_100h": [
+   3.0,
+   6.0
+  ],
+  "ageing_cht_k_per_100h": [
+   1.0,
+   2.5
+  ],
+  "egt_cylinder_offset_sd_k": 8.0,
+  "indicated_efficiency_rel": 0.02,
+  "eta_v_peak_rel": 0.015,
+  "fmep_a_rel": 0.05
+ },
+ "healthy_engines": 12,
+ "faulty_engines": 48,
+ "engines": [
+  0,
+  6,
+  10,
+  15,
+  24,
+  29,
+  32,
+  41,
+  42,
+  43,
+  56,
+  59,
+  60,
+  68,
+  77,
+  79,
+  80,
+  82,
+  88,
+  99,
+  103,
+  113,
+  116,
+  117,
+  122,
+  124,
+  125,
+  132,
+  142,
+  150,
+  153,
+  156,
+  165,
+  173,
+  176,
+  179,
+  182,
+  185,
+  189,
+  197,
+  201,
+  209,
+  215,
+  216,
+  221,
+  224,
+  227,
+  229,
+  240,
+  242,
+  249,
+  258,
+  269,
+  271,
+  274,
+  278,
+  283,
+  285,
+  286,
+  299
+ ],
+ "results": {
+  "v2": {
+   "without_adaptation": {
+    "healthy_engines": 12,
+    "faulty_engines": 48,
+    "healthy_false_alarm_rate": 0.8567146282973621,
+    "healthy_false_alarm_by_source": {
+     "anomaly": 0.8249400479616307,
+     "rule": 0.050359712230215826,
+     "ml": 0.33992805755395683
+    },
+    "detection_rate": 1.0,
+    "median_lead_h": 296.80368809294214,
+    "mean_lead_h": 300.74102581356004,
+    "pre_onset_false_alarm_rate": 0.9308142629058009,
+    "per_class_detected_and_median_lead_h": {
+     "BATTERY_DEGRADATION": [
+      4,
+      339.580804253303
+     ],
+     "BEARING_WEAR": [
+      4,
+      379.7133542499447
+     ],
+     "CHARGING_FAULT": [
+      4,
+      381.83825906093773
+     ],
+     "COOLING_FAULT": [
+      4,
+      382.60484932278746
+     ],
+     "DETONATION_KNOCK": [
+      4,
+      211.19688566919064
+     ],
+     "EXHAUST_VALVE_LEAK": [
+      4,
+      239.77166739825282
+     ],
+     "FUEL_SYSTEM_FAULT": [
+      4,
+      267.38803903028565
+     ],
+     "IMBALANCE": [
+      4,
+      325.7570548454773
+     ],
+     "INJECTOR_FAULT": [
+      4,
+      369.980594199719
+     ],
+     "INTAKE_BOOST_LEAK": [
+      4,
+      174.30804828150116
+     ],
+     "MISFIRE": [
+      4,
+      302.1283211130157
+     ],
+     "OIL_DEGRADATION": [
+      4,
+      247.80342136224294
+     ]
+    },
+    "adaptation_decisions": {},
+    "healthy_adapted_share": 0.0
+   },
+   "with_adaptation": {
+    "healthy_engines": 12,
+    "faulty_engines": 48,
+    "healthy_false_alarm_rate": 0.8567146282973621,
+    "healthy_false_alarm_by_source": {
+     "anomaly": 0.8249400479616307,
+     "rule": 0.050359712230215826,
+     "ml": 0.33992805755395683
+    },
+    "detection_rate": 1.0,
+    "median_lead_h": 296.80368809294214,
+    "mean_lead_h": 300.74102581356004,
+    "pre_onset_false_alarm_rate": 0.9308142629058009,
+    "per_class_detected_and_median_lead_h": {
+     "BATTERY_DEGRADATION": [
+      4,
+      339.580804253303
+     ],
+     "BEARING_WEAR": [
+      4,
+      379.7133542499447
+     ],
+     "CHARGING_FAULT": [
+      4,
+      381.83825906093773
+     ],
+     "COOLING_FAULT": [
+      4,
+      382.60484932278746
+     ],
+     "DETONATION_KNOCK": [
+      4,
+      211.19688566919064
+     ],
+     "EXHAUST_VALVE_LEAK": [
+      4,
+      239.77166739825282
+     ],
+     "FUEL_SYSTEM_FAULT": [
+      4,
+      267.38803903028565
+     ],
+     "IMBALANCE": [
+      4,
+      325.7570548454773
+     ],
+     "INJECTOR_FAULT": [
+      4,
+      369.980594199719
+     ],
+     "INTAKE_BOOST_LEAK": [
+      4,
+      174.30804828150116
+     ],
+     "MISFIRE": [
+      4,
+      302.1283211130157
+     ],
+     "OIL_DEGRADATION": [
+      4,
+      247.80342136224294
+     ]
+    },
+    "adaptation_decisions": {
+     "refused": 6500,
+     "commissioning_pending": 17
+    },
+    "healthy_adapted_share": 0.0
+   },
+   "case_a_false_alarms_reduced": false,
+   "case_b_detection_worse": false,
+   "verdict": "REJECTED: (a) false alarms on healthy engines are not reduced"
+  },
+  "v3": {
+   "without_adaptation": {
+    "healthy_engines": 12,
+    "faulty_engines": 48,
+    "healthy_false_alarm_rate": 0.15827338129496402,
+    "healthy_false_alarm_by_source": {
+     "anomaly": 0.0005995203836930455,
+     "rule": 0.050359712230215826,
+     "ml": 0.11390887290167866
+    },
+    "detection_rate": 0.9166666666666666,
+    "median_lead_h": 224.7661974755146,
+    "mean_lead_h": 232.1863166340613,
+    "pre_onset_false_alarm_rate": 0.06812134113890367,
+    "per_class_detected_and_median_lead_h": {
+     "BATTERY_DEGRADATION": [
+      2,
+      189.20503894452213
+     ],
+     "BEARING_WEAR": [
+      4,
+      372.2133542499447
+     ],
+     "CHARGING_FAULT": [
+      4,
+      369.33825906093773
+     ],
+     "COOLING_FAULT": [
+      2,
+      262.3175893107689
+     ],
+     "DETONATION_KNOCK": [
+      4,
+      176.19688566919064
+     ],
+     "EXHAUST_VALVE_LEAK": [
+      4,
+      167.27166739825282
+     ],
+     "FUEL_SYSTEM_FAULT": [
+      4,
+      35.386142737057355
+     ],
+     "IMBALANCE": [
+      4,
+      285.7570548454773
+     ],
+     "INJECTOR_FAULT": [
+      4,
+      274.980594199719
+     ],
+     "INTAKE_BOOST_LEAK": [
+      4,
+      60.03473039004837
+     ],
+     "MISFIRE": [
+      4,
+      299.6283211130157
+     ],
+     "OIL_DEGRADATION": [
+      4,
+      185.30342136224294
+     ]
+    },
+    "adaptation_decisions": {},
+    "healthy_adapted_share": 0.0
+   },
+   "with_adaptation": {
+    "healthy_engines": 12,
+    "faulty_engines": 48,
+    "healthy_false_alarm_rate": 0.16127098321342925,
+    "healthy_false_alarm_by_source": {
+     "anomaly": 0.0005995203836930455,
+     "rule": 0.050359712230215826,
+     "ml": 0.11810551558752998
+    },
+    "detection_rate": 0.9166666666666666,
+    "median_lead_h": 224.7661974755146,
+    "mean_lead_h": 232.1863166340613,
+    "pre_onset_false_alarm_rate": 0.0745077168706759,
+    "per_class_detected_and_median_lead_h": {
+     "BATTERY_DEGRADATION": [
+      2,
+      189.20503894452213
+     ],
+     "BEARING_WEAR": [
+      4,
+      372.2133542499447
+     ],
+     "CHARGING_FAULT": [
+      4,
+      369.33825906093773
+     ],
+     "COOLING_FAULT": [
+      2,
+      262.3175893107689
+     ],
+     "DETONATION_KNOCK": [
+      4,
+      176.19688566919064
+     ],
+     "EXHAUST_VALVE_LEAK": [
+      4,
+      152.27166739825282
+     ],
+     "FUEL_SYSTEM_FAULT": [
+      4,
+      35.386142737057355
+     ],
+     "IMBALANCE": [
+      4,
+      285.7570548454773
+     ],
+     "INJECTOR_FAULT": [
+      4,
+      274.980594199719
+     ],
+     "INTAKE_BOOST_LEAK": [
+      4,
+      72.53473039004837
+     ],
+     "MISFIRE": [
+      4,
+      299.6283211130157
+     ],
+     "OIL_DEGRADATION": [
+      4,
+      185.30342136224294
+     ]
+    },
+    "adaptation_decisions": {
+     "commissioning_pending": 539,
+     "commissioned": 59,
+     "adapted": 44,
+     "frozen": 5676,
+     "refused": 188,
+     "no_change": 11
+    },
+    "healthy_adapted_share": 0.9142685851318945
+   },
+   "case_a_false_alarms_reduced": false,
+   "case_b_detection_worse": false,
+   "verdict": "REJECTED: (a) false alarms on healthy engines are not reduced"
+  }
+ },
+ "seconds": 4996,
+ "comparison": {
+  "champion": "v2",
+  "candidate": "v3",
+  "checks": {
+   "lifetime_fewer_false_alarms": true,
+   "lifetime_detection_not_worse": false,
+   "lifetime_lead_not_worse": false,
+   "p16_pr_auc_within_margin": true,
+   "p16_macro_f1_within_margin": true,
+   "p16_fpr_at_most_max": false
+  },
+  "strictly_better": {
+   "p16_pr_auc": true,
+   "p16_macro_f1": false,
+   "p16_fpr": false,
+   "lifetime_false_alarms": true
+  },
+  "adopt_candidate": false,
+  "p16_test": {
+   "v2": {
+    "pr_auc": 0.8409179277893035,
+    "fpr": 0.04582305252026789,
+    "macro_f1": 0.7672811280722013
+   },
+   "v3": {
+    "pr_auc": 0.8533977238940766,
+    "fpr": 0.20131930107256155,
+    "macro_f1": 0.7660352892291826
+   }
+  },
+  "decision": "v2 kept; failed: lifetime_detection_not_worse, lifetime_lead_not_worse, p16_fpr_at_most_max"
+ }
+}

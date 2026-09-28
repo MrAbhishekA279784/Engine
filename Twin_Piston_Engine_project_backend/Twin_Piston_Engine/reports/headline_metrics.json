@@ -1,0 +1,111 @@
+{
+ "provenance": "SIMULATED",
+ "note": "every number is simulated",
+ "dataset_split": "life2",
+ "model_version": "v3",
+ "variation": {
+  "ageing_egt_k_per_100h": [
+   3.0,
+   6.0
+  ],
+  "ageing_cht_k_per_100h": [
+   1.0,
+   2.5
+  ],
+  "egt_cylinder_offset_sd_k": 8.0,
+  "indicated_efficiency_rel": 0.02,
+  "eta_v_peak_rel": 0.015,
+  "fmep_a_rel": 0.05
+ },
+ "healthy_engines": 12,
+ "faulty_engines": 48,
+ "definitions": {
+  "window": "20 s at 1 Hz every 5 engine hours",
+  "confidence_threshold": 0.7,
+  "detection": "two consecutive alarm windows after onset"
+ },
+ "alarms": {
+  "rule": {
+   "healthy_window_false_alarm_rate": 0.050359712230215826,
+   "detection_rate": 0.7708333333333334,
+   "detected": 37,
+   "faulty_engines": 48,
+   "median_lead_h": 174.69434193598659,
+   "pre_onset_window_alarm_rate": 0.05162320383182544,
+   "missed": [
+    "BATTERY_DEGRADATION",
+    "BATTERY_DEGRADATION",
+    "BATTERY_DEGRADATION",
+    "BATTERY_DEGRADATION",
+    "COOLING_FAULT",
+    "COOLING_FAULT",
+    "COOLING_FAULT",
+    "INTAKE_BOOST_LEAK",
+    "INTAKE_BOOST_LEAK",
+    "INTAKE_BOOST_LEAK",
+    "INTAKE_BOOST_LEAK"
+   ]
+  },
+  "v3": {
+   "healthy_window_false_alarm_rate": 0.11390887290167866,
+   "detection_rate": 0.9166666666666666,
+   "detected": 44,
+   "faulty_engines": 48,
+   "median_lead_h": 207.69342218500242,
+   "pre_onset_window_alarm_rate": 0.018626929217668974,
+   "missed": [
+    "BATTERY_DEGRADATION",
+    "BATTERY_DEGRADATION",
+    "COOLING_FAULT",
+    "COOLING_FAULT"
+   ]
+  },
+  "combined": {
+   "healthy_window_false_alarm_rate": 0.15767386091127097,
+   "detection_rate": 0.9166666666666666,
+   "detected": 44,
+   "faulty_engines": 48,
+   "median_lead_h": 224.7661974755146,
+   "pre_onset_window_alarm_rate": 0.06865353911655135,
+   "missed": [
+    "BATTERY_DEGRADATION",
+    "BATTERY_DEGRADATION",
+    "COOLING_FAULT",
+    "COOLING_FAULT"
+   ]
+  }
+ },
+ "rule_classes_on_healthy_windows": {
+  "INJECTOR_FAULT": 83,
+  "COOLING_FAULT": 1
+ },
+ "rul": {
+  "bundle": "models/life1/rul_lifetime.joblib",
+  "trained_on": "life1",
+  "bands": {
+   "0-50h": {
+    "n": 473,
+    "mae_h": 35.88704707259462,
+    "coverage_90": 0.7103594080338267
+   },
+   "50-150h": {
+    "n": 925,
+    "mae_h": 38.42164683483623,
+    "coverage_90": 0.8778378378378379
+   },
+   "150-400h": {
+    "n": 2385,
+    "mae_h": 103.43218307671641,
+    "coverage_90": 0.379874213836478
+   }
+  },
+  "coverage_90_overall": 0.5429553264604811,
+  "faulty_window_status_share": {
+   "ESTIMATED": 0.7802,
+   "INDETERMINATE": 0.1188,
+   "NO_DEGRADATION": 0.1011
+  },
+  "healthy_windows_estimated_share": 0.7781774580335732
+ },
+ "seconds": 1036
+}

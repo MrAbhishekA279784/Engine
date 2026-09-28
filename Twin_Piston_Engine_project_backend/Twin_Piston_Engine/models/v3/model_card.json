@@ -1,0 +1,291 @@
+{
+ "version": "v3",
+ "provenance": {
+  "dataset_version": "v2",
+  "dataset_sha256": "891745ec552ab36e021944d10161cc252202e410f138b54efd2dd321783d802c",
+  "dataset_seed": 20260928,
+  "training_seed": 20260928,
+  "code_git_sha_dataset": "732b21886f8e2daa1d9d95f818de07c3c7bc0140-dirty",
+  "config_hash": "3689a9ab23ace39f7f7dccce14587c92147d1d5575f12d1f88517bac5dabcb2c",
+  "data_provenance": "SIMULATED",
+  "extra_dataset_version": "life2",
+  "extra_dataset_sha256": "9d38ba2a68b916133486b13b32a5f2a22cdaa567a1905892c795c150277946c0",
+  "extra_dataset_seed": 20260929,
+  "extra_split_by": "whole engine, stratified by class"
+ },
+ "class_count": 14,
+ "features": [
+  "res_egt_cyl1",
+  "res_egt_cyl2",
+  "res_egt_cyl3",
+  "res_egt_cyl4",
+  "res_cht",
+  "res_coolant",
+  "res_fuel_flow",
+  "res_oil_pressure",
+  "res_oil_temp",
+  "res_vibration_rms",
+  "res_brake_power_kw",
+  "res_fuel_rail_pressure",
+  "res_fuel_delivery_ratio",
+  "res_injector_flow_ratio_cyl1",
+  "res_injector_flow_ratio_cyl2",
+  "res_injector_flow_ratio_cyl3",
+  "res_injector_flow_ratio_cyl4",
+  "twin_bmep_pa",
+  "twin_eta_volumetric",
+  "twin_eta_thermal",
+  "twin_mean_piston_speed",
+  "twin_lambda",
+  "twin_sfc",
+  "twin_engine_load",
+  "vib_overall_rms",
+  "vib_crest",
+  "vib_kurtosis",
+  "vib_half_order",
+  "vib_firing_order",
+  "vib_envelope_rms",
+  "vib_vhi",
+  "vib_prop1x_vel_frac_lat",
+  "vib_prop1x_lat_vert_ratio",
+  "comb_crank_cov",
+  "comb_csi",
+  "lub_lhi",
+  "lub_pressure_margin",
+  "lub_temp_margin",
+  "elec_charging_residual",
+  "elec_ripple_pct",
+  "elec_r_int",
+  "elec_ehi",
+  "elec_ripple_order",
+  "inj_rail_residual",
+  "inj_mixture_factor",
+  "inj_delivery_ratio",
+  "inj_egt_diff_cyl1",
+  "inj_egt_diff_cyl2",
+  "inj_egt_diff_cyl3",
+  "inj_egt_diff_cyl4",
+  "inj_ign_residual_cyl1",
+  "inj_ign_residual_cyl2",
+  "inj_ign_residual_cyl3",
+  "inj_ign_residual_cyl4",
+  "inj_duty_max",
+  "cool_residual",
+  "cool_cht_delta",
+  "cool_cht_delta_residual",
+  "trend_cht",
+  "trend_egt_cyl1",
+  "trend_egt_cyl2",
+  "trend_egt_cyl3",
+  "trend_egt_cyl4",
+  "trend_oil_temp",
+  "trend_coolant",
+  "egt_spread"
+ ],
+ "anomaly_detector": {
+  "threshold": 0.49123418896966514,
+  "val": {
+   "fpr": 0.05000407578633564,
+   "pr_auc": 0.7542131102552108,
+   "n_train_records": 224060
+  }
+ },
+ "fault_classifier": {
+  "val": {
+   "macro_f1": 0.7039714075763399,
+   "best_iteration": 202
+  },
+  "top_importance": [
+   [
+    "vib_prop1x_vel_frac_lat",
+    0.0672396781046947
+   ],
+   [
+    "elec_ehi",
+    0.06341013419796807
+   ],
+   [
+    "egt_spread",
+    0.06253373666758659
+   ],
+   [
+    "vib_envelope_rms",
+    0.058230915216347955
+   ],
+   [
+    "lub_lhi",
+    0.05487907239330269
+   ],
+   [
+    "vib_half_order",
+    0.05250647447512649
+   ],
+   [
+    "res_fuel_delivery_ratio",
+    0.048357811548942344
+   ],
+   [
+    "res_egt_cyl1",
+    0.04579522101146675
+   ],
+   [
+    "cool_cht_delta",
+    0.03788263548404787
+   ],
+   [
+    "res_oil_pressure",
+    0.028982130987411946
+   ],
+   [
+    "res_injector_flow_ratio_cyl4",
+    0.02722401815289182
+   ],
+   [
+    "inj_egt_diff_cyl1",
+    0.024574296297661377
+   ],
+   [
+    "res_injector_flow_ratio_cyl3",
+    0.023374880186317202
+   ],
+   [
+    "res_injector_flow_ratio_cyl2",
+    0.02176849137241837
+   ],
+   [
+    "inj_ign_residual_cyl3",
+    0.01926806278823025
+   ]
+  ]
+ },
+ "rul": {
+  "decision": "not trained (lifetime RUL model is separate, scripts/train_rul.py)",
+  "val_ml": null,
+  "val_baseline": null
+ },
+ "fleet_residual_reference": {
+  "egt_cyl1": {
+   "rows": 201500,
+   "residual_sd": 44.15320965273521,
+   "sd_after_reference": 12.091226694790558
+  },
+  "egt_cyl2": {
+   "rows": 201500,
+   "residual_sd": 43.897126445458504,
+   "sd_after_reference": 11.74590207648379
+  },
+  "egt_cyl3": {
+   "rows": 201500,
+   "residual_sd": 43.84902092002242,
+   "sd_after_reference": 11.095970253591952
+  },
+  "egt_cyl4": {
+   "rows": 201500,
+   "residual_sd": 43.94927638673866,
+   "sd_after_reference": 11.352339738272814
+  },
+  "cht": {
+   "rows": 201500,
+   "residual_sd": 15.984792865917717,
+   "sd_after_reference": 3.6846402149284305
+  },
+  "coolant": {
+   "rows": 201500,
+   "residual_sd": 1.4594949583614902,
+   "sd_after_reference": 0.26494438032656425
+  },
+  "fuel_flow": {
+   "rows": 201500,
+   "residual_sd": 0.0004175079971846249,
+   "sd_after_reference": 4.681511208487227e-05
+  },
+  "oil_pressure": {
+   "rows": 201500,
+   "residual_sd": 4116.0084675645185,
+   "sd_after_reference": 1318.908207698262
+  },
+  "oil_temp": {
+   "rows": 201500,
+   "residual_sd": 11.221665072194316,
+   "sd_after_reference": 0.18342969918991625
+  },
+  "vibration_rms": {
+   "rows": 201500,
+   "residual_sd": 0.8004579457714075,
+   "sd_after_reference": 0.04172098522428224
+  },
+  "brake_power_kw": {
+   "rows": 201500,
+   "residual_sd": 3.072352413485527,
+   "sd_after_reference": 0.8576053110734285
+  },
+  "fuel_rail_pressure": {
+   "rows": 201500,
+   "residual_sd": 1521.510768308269,
+   "sd_after_reference": 1521.4086265931996
+  },
+  "fuel_delivery_ratio": {
+   "rows": 201500,
+   "residual_sd": 0.0017215049545080028,
+   "sd_after_reference": 0.0017206785097969915
+  },
+  "injector_flow_ratio_cyl1": {
+   "rows": 196529,
+   "residual_sd": 0.01311133526666324,
+   "sd_after_reference": 0.0126857414581527
+  },
+  "injector_flow_ratio_cyl2": {
+   "rows": 199617,
+   "residual_sd": 0.014403706458931916,
+   "sd_after_reference": 0.01422840018296441
+  },
+  "injector_flow_ratio_cyl3": {
+   "rows": 201363,
+   "residual_sd": 0.014013633129588539,
+   "sd_after_reference": 0.013499726018362931
+  },
+  "injector_flow_ratio_cyl4": {
+   "rows": 201500,
+   "residual_sd": 0.014455323585791897,
+   "sd_after_reference": 0.01414712671705886
+  }
+ },
+ "evaluation": {
+  "status": "NOT ADOPTED (v2 kept)",
+  "decision": "v2 kept; failed: lifetime_detection_not_worse, lifetime_lead_not_worse, p16_fpr_at_most_max",
+  "checks": {
+   "lifetime_fewer_false_alarms": true,
+   "lifetime_detection_not_worse": false,
+   "lifetime_lead_not_worse": false,
+   "p16_pr_auc_within_margin": true,
+   "p16_macro_f1_within_margin": true,
+   "p16_fpr_at_most_max": false
+  },
+  "p16_test": {
+   "v2": {
+    "pr_auc": 0.8409179277893035,
+    "fpr": 0.04582305252026789,
+    "macro_f1": 0.7672811280722013
+   },
+   "v3": {
+    "pr_auc": 0.8533977238940766,
+    "fpr": 0.20131930107256155,
+    "macro_f1": 0.7660352892291826
+   }
+  },
+  "lifetime_test_without_adaptation": {
+   "healthy_false_alarm_rate": 0.15827338129496402,
+   "healthy_false_alarm_by_source": {
+    "anomaly": 0.0005995203836930455,
+    "rule": 0.050359712230215826,
+    "ml": 0.11390887290167866
+   },
+   "detection_rate": 0.9166666666666666,
+   "median_lead_h": 224.7661974755146
+  },
+  "reports": [
+   "reports/v3/ml_metrics.md",
+   "reports/adaptation_eval.md"
+  ]
+ }
+}

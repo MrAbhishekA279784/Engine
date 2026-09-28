@@ -1,0 +1,188 @@
+{
+ "version": "v2",
+ "provenance": {
+  "dataset_version": "v2",
+  "dataset_sha256": "891745ec552ab36e021944d10161cc252202e410f138b54efd2dd321783d802c",
+  "dataset_seed": 20260928,
+  "training_seed": 20260928,
+  "code_git_sha_dataset": "732b21886f8e2daa1d9d95f818de07c3c7bc0140-dirty",
+  "config_hash": "3689a9ab23ace39f7f7dccce14587c92147d1d5575f12d1f88517bac5dabcb2c",
+  "data_provenance": "SIMULATED"
+ },
+ "class_count": 14,
+ "features": [
+  "res_egt_cyl1",
+  "res_egt_cyl2",
+  "res_egt_cyl3",
+  "res_egt_cyl4",
+  "res_cht",
+  "res_coolant",
+  "res_fuel_flow",
+  "res_oil_pressure",
+  "res_oil_temp",
+  "res_vibration_rms",
+  "res_brake_power_kw",
+  "res_fuel_rail_pressure",
+  "res_fuel_delivery_ratio",
+  "res_injector_flow_ratio_cyl1",
+  "res_injector_flow_ratio_cyl2",
+  "res_injector_flow_ratio_cyl3",
+  "res_injector_flow_ratio_cyl4",
+  "twin_bmep_pa",
+  "twin_eta_volumetric",
+  "twin_eta_thermal",
+  "twin_mean_piston_speed",
+  "twin_lambda",
+  "twin_sfc",
+  "twin_engine_load",
+  "vib_overall_rms",
+  "vib_crest",
+  "vib_kurtosis",
+  "vib_half_order",
+  "vib_firing_order",
+  "vib_envelope_rms",
+  "vib_vhi",
+  "vib_prop1x_vel_frac_lat",
+  "vib_prop1x_lat_vert_ratio",
+  "comb_crank_cov",
+  "comb_csi",
+  "lub_lhi",
+  "lub_pressure_margin",
+  "lub_temp_margin",
+  "elec_charging_residual",
+  "elec_ripple_pct",
+  "elec_r_int",
+  "elec_ehi",
+  "elec_ripple_order",
+  "inj_rail_residual",
+  "inj_mixture_factor",
+  "inj_delivery_ratio",
+  "inj_egt_diff_cyl1",
+  "inj_egt_diff_cyl2",
+  "inj_egt_diff_cyl3",
+  "inj_egt_diff_cyl4",
+  "inj_ign_residual_cyl1",
+  "inj_ign_residual_cyl2",
+  "inj_ign_residual_cyl3",
+  "inj_ign_residual_cyl4",
+  "inj_duty_max",
+  "cool_residual",
+  "cool_cht_delta",
+  "cool_cht_delta_residual",
+  "trend_cht",
+  "trend_egt_cyl1",
+  "trend_egt_cyl2",
+  "trend_egt_cyl3",
+  "trend_egt_cyl4",
+  "trend_oil_temp",
+  "trend_coolant",
+  "egt_spread"
+ ],
+ "anomaly_detector": {
+  "threshold": 0.4718843972967178,
+  "val": {
+   "fpr": 0.05001731558897739,
+   "pr_auc": 0.8513849795075088,
+   "n_train_records": 22560
+  }
+ },
+ "fault_classifier": {
+  "val": {
+   "macro_f1": 0.7913283378049171,
+   "best_iteration": 120
+  },
+  "top_importance": [
+   [
+    "egt_spread",
+    0.09929561811229595
+   ],
+   [
+    "vib_prop1x_vel_frac_lat",
+    0.065602237959567
+   ],
+   [
+    "elec_ehi",
+    0.05822064414076506
+   ],
+   [
+    "vib_envelope_rms",
+    0.05727817676499662
+   ],
+   [
+    "lub_lhi",
+    0.056486738254323036
+   ],
+   [
+    "res_egt_cyl1",
+    0.05129460692537087
+   ],
+   [
+    "vib_half_order",
+    0.04275206199068267
+   ],
+   [
+    "cool_cht_delta",
+    0.042492942649338686
+   ],
+   [
+    "lub_temp_margin",
+    0.039738467936525336
+   ],
+   [
+    "res_oil_pressure",
+    0.034322304444817084
+   ],
+   [
+    "comb_crank_cov",
+    0.0338753774208799
+   ],
+   [
+    "res_fuel_delivery_ratio",
+    0.032256051788807194
+   ],
+   [
+    "lub_pressure_margin",
+    0.026898087572407643
+   ],
+   [
+    "inj_delivery_ratio",
+    0.02306260435782469
+   ],
+   [
+    "trend_cht",
+    0.015378974784740448
+   ]
+  ]
+ },
+ "rul": {
+  "decision": "not adopted: it must beat the baseline in every horizon band on validation; populated bands ['<=50h'] of ['<=50h', '50-150h', '>150h']",
+  "val_ml": {
+   "<=50h": {
+    "n": 33600,
+    "mae_h": 0.010277307107973525
+   },
+   "50-150h": {
+    "n": 0,
+    "mae_h": null
+   },
+   ">150h": {
+    "n": 0,
+    "mae_h": null
+   }
+  },
+  "val_baseline": {
+   "<=50h": {
+    "n": 33320,
+    "mae_h": 842.0112500299759
+   },
+   "50-150h": {
+    "n": 0,
+    "mae_h": null
+   },
+   ">150h": {
+    "n": 0,
+    "mae_h": null
+   }
+  }
+ }
+}
